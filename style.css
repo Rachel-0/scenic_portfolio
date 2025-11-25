@@ -2011,4 +2011,20 @@ html {
   }
 
   
+  /* #################################### */
+
+  .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 3; /*Ensure it's above other content*/
+    padding-top: 20px;
+  }
   
+  .banner img {
+    width: 100%; /* Scales the image to the full width of the page */
+    /* opacity: 0.8; Makes the banner semi-transparent */
+    display: block; /* Removes any extra space around the image */
+  }
+
