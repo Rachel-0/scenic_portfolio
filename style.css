@@ -2035,7 +2035,7 @@ html {
   width: 450px;   /* set your circle size */
   height: 450px;  /* must match width */
   border-radius: 50%;     /* makes the circle */
-  background: rgba(29, 0, 64, 0.4);
+  background: linear-gradient(141deg, rgba(0, 125, 202, 0.409) 0%, rgba(26, 0, 158, 0.4) 51%, rgba(75, 0, 140, 0.4) 75%);
   z-index: 3;
   margin-top: 5%;
   margin-left: 60%;
