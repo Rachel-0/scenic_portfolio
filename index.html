@@ -49,35 +49,9 @@ img {margin-bottom: -7px}
 
 <div class="parallax"></div>
 
-<!-- <div class="parallax"></div> -->
 
-<style>
-  #myGrid {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-flow: dense;
-  }
-
-  #myGrid img {
-    width: 100%;
-    height: auto%;
-    display: block;
-    border-radius: 7px;
-    object-fit: cover;
-  }
-  /* Responsive tweaks */
-@media (max-width: 900px) {
-#myGrid { column-count: 2; }
-}
-
-@media (max-width: 600px) {
-#myGrid { column-count: 1; }
-}
-
-</style>
-
-<div id="myGrid" style="margin-bottom:128px">
+<div class="container">
+<div id="myGrid">
   <img src="hydro1.jpg">
   <img src="paint1.jpg">
   <img src="paint2.jpg">
@@ -99,7 +73,7 @@ img {margin-bottom: -7px}
   <img src="paint3.jpg">
   <img src="paint3.jpg">
 </div>
-
+</div>
 <!-- Photo Grid
 <div class="w3-row" id="myGrid" style="margin-bottom:128px">
   <div class="w3-third">

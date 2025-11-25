@@ -2018,7 +2018,7 @@ html {
   background-image: url("PXL_20250805_083319760.MP (1).jpg");
 
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 600px; 
 
   /* Create the parallax scrolling effect */
   background-attachment:fixed;
@@ -2056,7 +2056,49 @@ html {
 
 .container{
     max-width: 1224px;
-    width: 90%;
+    width: 95%;
     margin: auto;
     padding: 40px 0px;
 }
+
+.title{
+
+}
+
+.photogallery{
+
+}
+
+.column{
+
+}
+
+.photo{
+
+}
+
+#myGrid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-flow: dense;
+    }
+
+#myGrid img {
+    width: 100%;
+    height: auto%;
+    display: block;
+    border-radius: 7px;
+    object-fit: cover;
+    }
+
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+#myGrid { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+#myGrid { column-count: 1; }
+}
+
