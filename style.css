@@ -2013,18 +2013,40 @@ html {
   
   /* #################################### */
 
+.parallax {
+  /* The image used */
+  background-image: url("PXL_20250805_083319760.MP (1).jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
   .banner {
-    position: fixed;
+    position:static;
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
+    width: 100%;
+    height:50%;
     z-index: 3; /*Ensure it's above other content*/
-    padding-top: 20px;
+    padding-top: 5%;
+    background: rgba(0, 0, 0, 0.406);
   }
   
-  .banner img {
-    width: 100%; /* Scales the image to the full width of the page */
-    /* opacity: 0.8; Makes the banner semi-transparent */
-    display: block; /* Removes any extra space around the image */
-  }
 
+
+
+
+
+
+.container{
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0px;
+}
