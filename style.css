@@ -2028,18 +2028,28 @@ html {
 }
 
   .banner {
-    position:static;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height:50%;
     z-index: 3; /*Ensure it's above other content*/
     padding-top: 5%;
+    padding-right: 5%;
     background: rgba(0, 0, 0, 0.406);
+    text-align:right;
   }
   
 
+.banner h1 {
+  font-size: 60px; /* adjust */
+  margin: 0;
+}
 
+.banner p {
+  font-size: 40px; /* adjust */
+  margin: 0;
+}
 
 
 
