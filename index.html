@@ -112,12 +112,7 @@ img {margin-bottom: -7px}
   </div>
 </div>
 
-<div class="main">
-  <h2>Sidebar Dropdown</h2>
-  <p>Some random text.. The next example will show you how to make the dropdown link functional.</p>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Some random text..</p>
-</div>
+
 
 <!-- End Page Content -->
 </div>
@@ -149,6 +144,15 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+</script>
+
+<script>
+/* Prevent browser from restoring previous scroll on history navigation */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+/* Ensure page is at the top on load/refresh */
+window.addEventListener('load', () => window.scrollTo(0, 0));
+window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
 </script>
 
  <script>

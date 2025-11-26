@@ -2150,62 +2150,76 @@ html {
 }
 
 /* sidebar with dropdown for contact info */
-
 /* Fixed sidenav, full height */
 .sidenav {
-  height: 100%;
-  width: 100px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background: linear-gradient(141deg, rgba(0, 125, 202, 0.409) 0%, rgba(26, 0, 158, 0.4) 31%, rgba(75, 0, 140, 0) 65%);
-  z-index: 3;
-  margin-top: 0%;
-  overflow-x: hidden;
-  padding-top: 0px;
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(141deg, rgba(0, 125, 202, 0.409) 0%, rgba(26, 0, 158, 0.4) 25%, rgba(75, 0, 140, 0) 50%);
+    z-index: 3;
+    margin-top: 0%;
+    overflow: visible; /* allow dropdown to expand outside the sidenav */
+    padding-top: 0px;
 }
-
-
 
 /* Style the sidenav links and the dropdown button */
 .sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #ffffff;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
 }
 
 /* On mouse-over */
 .sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
+    color: rgba(255, 255, 255, 0.715)
+}
+
+/* Dropdown container: size to fit text and allow it to overflow the sidenav */
+.dropdown-container {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.438);
+    padding: 8px;
+    white-space: nowrap;            /* keep items on one line so width matches text */
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: max-content;            /* size to fit content */
+    min-width: 100%;               /* at least as wide as the sidenav */
+    box-sizing: border-box;
+    position: absolute;            /* remove it from document flow so it can overflow */
+    left: 100px;                   /* place it immediately to the right of the 100px sidenav */
+    z-index: 4;
+    font-size: 25px;
 }
 
 /* Main content */
 .main {
-  margin-left: 100px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+    margin-left: 100px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
 }
 
 /* Add an active class to the active dropdown button */
 .active {
-  background-color: green;
-  color: white;
+  background-color: rgba(26, 0, 158, 0.4);
+  color: rgb(255, 255, 255);
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
-  background-color: rgb(26, 0, 158);
+  background: linear-gradient(100deg, rgba(102, 248, 76, 0.667) 0%, rgba(53, 155, 35, 0.685) 65%);
   padding-left: 8px;
+  width: 380px;
 }
 
 /* Optional: Style the caret down icon */
