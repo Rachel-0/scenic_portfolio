@@ -41,15 +41,17 @@ img {margin-bottom: -7px}
 
 
 <header class="banner">
-<h1><b>Hi, I'm Rachel</b></h1>
-<p><b>Scenic painter</b></p>
-<!-- <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p> -->
+    <h1 class="texta"><b>Hi, I'm Rachel</b></h1>
+    <p class="textb"><b>Scenic painter</b></p>
+    <!-- <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p> -->
 </header>
 </div>
 
 <div class="parallax"></div>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<!-- Photo Grid -->
 <div class="container">
     <div class="title">
         <!-- style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;" -->
@@ -95,33 +97,26 @@ img {margin-bottom: -7px}
     </div>
 </div>
             
-<!-- <div id="myGrid"> -->
-  <!-- <img src="images\gc_texture3.jpg">
-  <img src="images\houses_finished1.jpg">
-  <img src="images\roof1.jpg">
-  <img src="images\hydro1.jpg">
-  <img src="images\paint1.jpg">
-  
+</div>
+</div>
+</div>
 
-  <img src="images\doggy_barbieprison.jpg">
-  <img src="images\green_house_texture.jpg">
-  <img src="images\snail_texture_hydro.jpg">
-  <img src="images\brush.jpg"> -->
-  <!-- <img src="images\pink_brushed_texture.jpg">
-  <img src="images\planters1.jpg">
+<div class="sidenav">
+  <a href="#about">About</a>
+  <button class="dropdown-btn">Contact 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <p>rachel.cooper01@gmail.com</p>
+    <p>Harringey, London</p>
+  </div>
+</div>
 
-  <img src="images\grandcentral1.jpg">
-  <img src="images\paint3.jpg">
-  <img src="images\hydro_Rachel.jpg">
-  <img src="images\gc_texture2.jpg">
-  <img src="images\red_pink.jpg">
-  <img src="images\roof3.jpg">
-  <img src="images\hydro2.jpg">
-</div>
-</div> -->
-<!-- </div> -->
-</div>
-</div>
+<div class="main">
+  <h2>Sidebar Dropdown</h2>
+  <p>Some random text.. The next example will show you how to make the dropdown link functional.</p>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Some random text..</p>
 </div>
 
 <!-- End Page Content -->
@@ -137,7 +132,47 @@ img {margin-bottom: -7px}
   <i class="fa fa-linkedin w3-hover-opacity"></i> -->
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
- 
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+ <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 <script>
 
 
