@@ -15,7 +15,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #d8d2d2;
+    background-color: linear-gradient(141deg, rgba(0, 125, 202, 0.409) 0%, rgba(26, 0, 158, 0.4) 51%, rgba(75, 0, 140, 0.4) 75%);
     padding-top: 10px;
 }
 
@@ -2080,13 +2080,13 @@ html {
 
 .photogallery{
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .column{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction:column;
+    gap: 15px;
 
 }
 
@@ -2098,7 +2098,7 @@ html {
 
 }
 
-#myGrid {
+/* #myGrid {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -2111,7 +2111,7 @@ html {
     display: block;
     border-radius: 7px;
     object-fit: cover;
-    }
+    } */
 
 
 /* Responsive tweaks */
