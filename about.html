@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="icon" href="favicon-16x16.png" type="image/png">
+<title>about</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+body { background-image: url("images/concrete_texture.jpg"); 
+       background-size: cover;
+       background-attachment: fixed;
+       background-position: center;
+       background-repeat: no-repeat;
+       }
+</style>
+</head>
+<body>
+
+
+    
+<!-- !PAGE CONTENT! -->
+<section aria-labelledby="about-heading" style="max-width:960px;margin:48px auto;padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.88), rgba(250,250,250,0.82));box-shadow:0 12px 36px rgba(0,0,0,0.25);backdrop-filter:blur(6px);">
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+        <img src="images\rachel_portrait.jpg" alt="Profile photo" style="width:160px;height:160px;object-fit:cover;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,0.2);border:4px solid rgba(255,255,255,0.6)">
+        <div style="flex:1;min-width:260px">
+            <h1 id="about-heading" style="font-family:'Montserrat',sans-serif;margin:0 0 8px;font-size:28px;color:#111">About Me</h1>
+            <p style="margin:0 0 12px;color:#333;line-height:1.55">
+                I'm a scenic painter who loves to get stuck in. I'm not shy about lifting heavy things or getting my hands painty. I prioritise high quality of work while making efficient use of time and materials to meet project deadlines.
+            </p>
+            <p style="margin:0 0 16px;color:#333;line-height:1.55">
+                I love learning new techniques and have experience with colour matching, creating various textures with adenden, artex, orbital sander, bonding and grit, aging and tying in, washes, dry brushing, sea sponge, clarke spray gun, hopper spray gun, textured plastering effects, wood staining, priming/fire retardants, wood filling and repair, minor carpentary and restoration, scaffolding climbing and working at height, mock brickwork and tile effects, event decoration. I also have skills in horticulture and seamstress work.
+            </p>
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:rgb(88, 201, 215);color:#fff;padding:6px 10px;border-radius:999px;font-size:13px">Events</span>
+                <span style="background:rgb(53, 155, 35);color:#fff;padding:6px 10px;border-radius:999px;font-size:13px">Festivals</span>
+                <span style="background:rgb(220, 110, 159);color:#111;padding:6px 10px;border-radius:999px;font-size:13px">Immersive games</span>
+                <span style="background:rgb(26, 0, 158);color:#fff;padding:6px 10px;border-radius:999px;font-size:13px">Theatre</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Back to top button (script in the page will toggle visibility) -->
+<button id="myBtn" onclick="topFunction()" title="Back to top" aria-label="Back to top"
+    style="display:none;position:fixed;bottom:28px;right:28px;z-index:9999;background:#111;color:#fff;border:none;padding:12px 14px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.3);cursor:pointer;font-size:18px">
+    ↑
+</button>
+
+
+<div class="sidenav">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small" >Home</a>
+  <button class="dropdown-btn">Contact 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <p>rachel.cooper01@gmail.com</p>
+    <p>07946547482</p>
+    <p>Harringey, London</p>
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
+/* Prevent browser from restoring previous scroll on history navigation */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+/* Ensure page is at the top on load/refresh */
+window.addEventListener('load', () => window.scrollTo(0, 0));
+window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
+</script>
+
+ <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<script>
+
+
+
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
