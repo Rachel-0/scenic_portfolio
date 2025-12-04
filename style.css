@@ -2270,10 +2270,10 @@ html {
   border-radius: 50%; /* makes the circle */
   background: linear-gradient(
     155deg,
-    rgba(0, 0, 0, 0.402) 10%,
-    /* rgba(191, 198, 198, 0.395) 15%, */ rgba(0, 255, 242, 0.237) 40%,
+    rgba(255, 255, 255, 0.559) 5%,
+    /* rgba(191, 198, 198, 0.395) 15%, */ rgba(35, 206, 195, 0.237) 40%,
     /* rgba(26, 0, 158, 0.13) 70%, */ /* rgba(188, 193, 194, 0) 80%, */
-      rgba(0, 41, 65, 0.626) 85%
+      rgba(0, 41, 65, 0.648) 85%
   );
   z-index: 3;
   margin-top: 5%;
@@ -2306,7 +2306,7 @@ html {
 @media (max-width: 768px) {
   /* Target small screens (like tablets and phones) */
   .banner {
-    /* padding-top: 5px; Adjust padding for smaller screens */
+    padding-top: 5%; /*Adjust padding for smaller screens
     /* margin-top: 5%; */
     margin-right: 15% !important; /*Center the banner on small screens
     /* width: 50%; */
@@ -2398,7 +2398,7 @@ html {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: rgba(0, 172, 202, 0.788); /* Set a background color */
+  background-color: rgba(35, 206, 195, 0.788); /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -2475,10 +2475,10 @@ html {
 }
 
 /* On mouse-over */
-.sidenav a:hover,
-.dropdown-btn:hover {
-  /* color: rgba(255, 255, 255, 0.715); */
-}
+/* .sidenav a:hover,
+.dropdown-btn:hover { */
+/* color: rgba(255, 255, 255, 0.715); */
+/* } */
 
 /* Dropdown container: size to fit text and allow it to overflow the sidenav */
 .dropdown-container {
