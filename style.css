@@ -2315,8 +2315,8 @@ html {
 @media (max-width: 768px) {
   /* Target small screens (like tablets and phones) */
   .banner {
-    padding-top: 5%; /*Adjust padding for smaller screens
-    /* margin-top: 5%; */
+    padding-top: 7%; /*Adjust padding for smaller screens */
+    margin-top: 7%;
     margin-right: 15% !important; /*Center the banner on small screens
     /* width: 50%; */
     /* height: 50%; */
@@ -2342,7 +2342,8 @@ html {
 @media (max-width: 480px) {
   /* Target very small screens (like phones) */
   .banner {
-    padding-top: 5%; /* Minimal padding for very small screens */
+    padding-top: 7%; /* Minimal padding for very small screens */
+    margin-top: 7%;
     margin-right: 6% !important; /*Center the banner on small screens
     /* width: 20vw;
         height: 20vw; */
