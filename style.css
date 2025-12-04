@@ -1592,9 +1592,18 @@ a {
 }
 
 /* ############ */
+/* apply hover only when element does NOT have .no-hover */
 .w3-button:hover {
-  color: #000 !important;
-  background-color: #00000000 !important;
+  color: rgb(35, 206, 195) !important;
+  background-color: rgba(255, 255, 255, 0.178) !important;
+}
+
+/* optional: make sure .no-hover never changes on hover */
+.w3-button.no-hover:hover {
+  color: inherit !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 /* ############# */
 
@@ -2539,12 +2548,12 @@ html {
 }
 
 .text_contact {
-  font-size: 17px;
+  font-size: 15px;
   color: rgb(165, 169, 170);
   text-align: left;
 }
 .text_contacta {
-  font-size: 17px;
+  font-size: 15px;
   color: rgb(165, 169, 170);
   text-align: left;
 }
