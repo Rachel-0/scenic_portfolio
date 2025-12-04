@@ -11,12 +11,78 @@
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
-body { background-image: url("images/concrete_texture.jpg"); 
+body { background-image: url("compressed_sceneic_portfolio/concrete_texture (1).jpg"); 
        background-size: cover;
        background-attachment: fixed;
        background-position: center;
        background-repeat: no-repeat;
        }
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #111111c5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(0, 172, 202);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: rgb(0, 195, 202);
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.685);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:rgba(0, 125, 202, 0.409);
+  color: black;
+}
+/* ensure open button sits above content and is always clickable */
+.openbtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+/* make sure sidepanel overlays page */
+.sidepanel {
+  box-sizing: border-box;
+  z-index: 1099;
+}
+
+/* optional: smooth width transition */
+.sidepanel {
+  transition: width 0.25s ease;
+}
+
 </style>
 </head>
 <body>
@@ -133,7 +199,7 @@ body { background-image: url("images/concrete_texture.jpg");
 <!-- !PAGE CONTENT! -->
 <section aria-labelledby="about-heading" style="max-width:960px;margin:48px auto;padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.88), rgba(250,250,250,0.82));box-shadow:0 12px 36px rgba(0,0,0,0.25);backdrop-filter:blur(6px);">
     <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
-        <img src="images\rachel_portrait.jpg" alt="Profile photo" style="width:160px;height:160px;object-fit:cover;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,0.2);border:4px solid rgba(255,255,255,0.6)">
+        <img src="compressed_sceneic_portfolio/rachel_portrait (1).jpg" alt="Profile photo" style="width:160px;height:160px;object-fit:cover;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,0.2);border:4px solid rgba(255,255,255,0.6)">
         <div style="flex:1;min-width:260px">
             <h1 id="about-heading" style="font-family:'Montserrat',sans-serif;margin:0 0 8px;font-size:28px;color:#111">About Me</h1>
             <p style="margin:0 0 12px;color:#333;line-height:1.55">
@@ -171,17 +237,17 @@ body { background-image: url("images/concrete_texture.jpg");
 </button>
 
 
-<div class="sidenav">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-  <button class="dropdown-btn">Contact 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <p>rachel.cooper01@gmail.com</p>
-    <p>07946547482</p>
-    <p>Harringey, London</p>
-  </div>
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); document.getElementById('openBtn').style.display='block';">×</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" >About</a>
+  <a class="w3-bar-item w3-button w3-padding-large" >Contact
+  <p class="text_contacta"> <br>rachel.cooper01@gmail.com</p>
+    <p class="text_contact"> <br>07946547482</p>
+    <p class="text_contact"> Harringey, London</p></a>
 </div>
+
+<button id="openBtn" class="openbtn" onclick="openNav(); this.style.display='none';">☰ More</button>
+
 
 <!-- End Page Content -->
 </div>
@@ -268,6 +334,15 @@ function w3_open() {
 
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
 }
 </script>
 

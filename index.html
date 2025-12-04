@@ -12,6 +12,77 @@ body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #111111c5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(0, 172, 202);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: rgb(0, 195, 202);
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.685);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:rgba(0, 125, 202, 0.409);
+  color: black;
+}
+/* ensure open button sits above content and is always clickable */
+.openbtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+/* make sure sidepanel overlays page */
+.sidepanel {
+  box-sizing: border-box;
+  z-index: 1099;
+}
+
+/* optional: smooth width transition */
+.sidepanel {
+  transition: width 0.25s ease;
+}
+
 </style>
 </head>
 <body>
@@ -39,11 +110,9 @@ img {margin-bottom: -7px}
 <!-- Header -->
  
 
-
 <header class="banner">
     <h1 class="texta"><b>Hi, I'm Rachel</b></h1>
     <p class="textb"><b>Scenic painter</b></p>
-    <!-- <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p> -->
 </header>
 </div>
 
@@ -51,10 +120,21 @@ img {margin-bottom: -7px}
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<!-- Photo Grid -->
-<div class="container">
+<style>
+/* Responsive swap: default (small screens) show 2-column, hide 3-column */
+.gallery-three { display: none; }
+.gallery-two  { display: block; }
+
+/* Large screens: show 3-column gallery, hide 2-column */
+@media (min-width: 900px) {
+  .gallery-three { display: block; }
+  .gallery-two  { display: none; }
+}
+</style>
+
+<!-- Photo Grid (three-column for large screens) -->
+<div class="container gallery-three">
     <div class="title">
-        <!-- style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;" -->
         <div class="photogallery" >
             <div class="column">
                 <div class="photo"><img src="images\houses_finished2.jpg"></div>
@@ -68,9 +148,7 @@ img {margin-bottom: -7px}
                 <div class="photo"><img src="images\Rachel_tinypaint.jpeg"></div>
                 <div class="photo"><img src="images\greenhouse_texture2.jpg"></div>
                 <div class="photo"><img src="images\grandcentral_nose.jpg"></div>
-
                 <div class="photo"><img src="images\hydro9.jpeg"></div>
-                
             </div>
             <div class="column">   
                 <div class="photo"><img src="images/brush.jpg"></div>
@@ -81,20 +159,14 @@ img {margin-bottom: -7px}
                 <div class="photo"><img src="images/doggy_barbieprison.jpg"></div>
                 <div class="photo"><img src="images/houses_finished1.jpg"></div>
                 <div class="photo"><img src="images\concrete_texture.jpg"></div>
-                
                 <div class="photo"><img src="images\WhatsApp Image 2025-11-27 at 01.13.05 (7).jpeg"></div>
                 <div class="photo"><img src="images\rachel_roller.jpeg"></div>
-                
-
                 <div class="photo"><img src="images\paint2.jpg"></div>
                 <div class="photo"><img src="images\gc_texture4.jpg"></div>
                 <div class="photo"><img src="images\hydro4.jpeg"></div>
                 <div class="photo"><img src="images\brushed_pink2.jpg"></div>
                 <div class="photo"><img src="images\red_house_texture.jpg"></div>
-                
             </div>
-
-            <!-- add more .photo items below to create additional rows (they will wrap into new rows, not new columns) -->
             <div class="column">    
                 <div class="photo"><img src="images\rachel_spray.jpeg"></div>
                 <div class="photo"><img src="images\hydro2.jpg"></div>
@@ -110,26 +182,73 @@ img {margin-bottom: -7px}
                 <div class="photo"><img src="images\colour_match.jpeg"></div>
                 <div class="photo"><img src="images\hydro_Rachel.jpg"></div>
                 <div class="photo"><img src="images\blue_house_texture1.jpg"></div>
-
-            </div>
-            <div class="column"> 
-                
-                
-               
-                
-            </div>
-                
-            </div>
             </div>
         </div>
     </div>
 </div>
-            
-</div>
-</div>
+
+<!-- Photo Grid (two-column for small screens) -->
+<div class="container gallery-two">
+    <div class="title">
+        <div class="photogallery" >
+            <div class="column">
+                <div class="photo"><img src="images\houses_finished2.jpg"></div>
+                <div class="photo"><img src="images\gc_texture3.jpg"></div>
+                <div class="photo"><img src="images\pink_paint.jpeg"></div>
+                <div class="photo"><img src="images\GC_aerial.jpeg"></div>
+                <div class="photo"><img src="images\roof1.jpg"></div>
+                <div class="photo"><img src="images\paint1.jpg"></div>
+                <div class="photo"><img src="images\red_pink.jpg"></div>
+                <div class="photo"><img src="images\roof4.jpg"></div>
+                <div class="photo"><img src="images\Rachel_tinypaint.jpeg"></div>
+                <div class="photo"><img src="images\greenhouse_texture2.jpg"></div>
+                <div class="photo"><img src="images\grandcentral_nose.jpg"></div>
+                <div class="photo"><img src="images\hydro9.jpeg"></div>
+                <div class="photo"><img src="images/brush.jpg"></div>
+                <div class="photo"><img src="images/snail_texture_hydro.jpg"></div>
+                <div class="photo"><img src="images/green_house_texture.jpg"></div>
+                <div class="photo"><img src="images/hydro1.jpg"></div>
+                <div class="photo"><img src="images\gc_texture2.jpg"></div>
+                <div class="photo"><img src="images/doggy_barbieprison.jpg"></div>
+                <div class="photo"><img src="images/houses_finished1.jpg"></div>
+                <div class="photo"><img src="images\concrete_texture.jpg"></div>
+            </div>
+            <div class="column"> 
+                <div class="photo"><img src="images\WhatsApp Image 2025-11-27 at 01.13.05 (7).jpeg"></div>
+                <div class="photo"><img src="images\rachel_roller.jpeg"></div>
+                <div class="photo"><img src="images\paint2.jpg"></div>
+                <div class="photo"><img src="images\gc_texture4.jpg"></div>
+                <div class="photo"><img src="images\hydro4.jpeg"></div>
+                <div class="photo"><img src="images\brushed_pink2.jpg"></div>
+                <div class="photo"><img src="images\red_house_texture.jpg"></div>
+                <div class="photo"><img src="images\rachel_spray.jpeg"></div>
+                <div class="photo"><img src="images\hydro2.jpg"></div>
+                <div class="photo"><img src="images\pink_brushed_texture.jpg"></div>
+                <div class="photo"><img src="images\planters1.jpg"></div>
+                <div class="photo"><img src="images\grandcentral1.jpg"></div>
+                <div class="photo"><img src="images\paint3.jpg"></div>
+                <div class="photo"><img src="images\planters4.jpg"></div>
+                <div class="photo"><img src="images\orange_house_texture.jpg"></div>
+                <div class="photo"><img src="images\houses_finished3.jpg"></div>
+                <div class="photo"><img src="images\blue_house_texture_shading.jpg"></div>
+                <div class="photo"><img src="images\planters5.jpg"></div>
+                <div class="photo"><img src="images\colour_match.jpeg"></div>
+                <div class="photo"><img src="images\hydro_Rachel.jpg"></div>
+                <div class="photo"><img src="images\blue_house_texture1.jpg"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="sidenav">
+
+<!-- <div id="mySidepanel" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+</div> -->
+
+<!-- <div id="mySidepanel" class="sidenav">
+  
+  
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="about.html" class="w3-bar-item w3-button w3-padding-large" >About</a>
   <button class="dropdown-btn">Contact 
     <i class="fa fa-caret-down"></i>
@@ -139,9 +258,18 @@ img {margin-bottom: -7px}
     <p>07946547482</p>
     <p>Harringey, London</p>
   </div>
+</div> -->
+
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); document.getElementById('openBtn').style.display='block';">×</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" >About</a>
+  <a class="w3-bar-item w3-button w3-padding-large" >Contact
+  <p class="text_contacta"> <br>rachel.cooper01@gmail.com</p>
+    <p class="text_contact"> <br>07946547482</p>
+    <p class="text_contact"> Harringey, London</p></a>
 </div>
 
-
+<button id="openBtn" class="openbtn" onclick="openNav(); this.style.display='none';">☰ More</button>
 
 <!-- End Page Content -->
 </div>
@@ -228,6 +356,16 @@ function w3_open() {
 
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
 }
 </script>
 

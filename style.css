@@ -66,7 +66,7 @@ template {
 }
 
 a {
-  background-color: #d8d2d2;
+  /* background-color: #d8d2d2; */
 }
 
 a:active,
@@ -413,7 +413,7 @@ a {
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
-  text-align: center;
+  /* text-align: center; */
   cursor: pointer;
   white-space: nowrap;
   z-index: 10;
@@ -533,20 +533,20 @@ a {
 
 .w3-dropdown-hover:first-child,
 .w3-dropdown-click:hover {
-  background-color: #d8d2d2;
+  /* background-color: #d8d2d2; */
   color: #000;
 }
 
 .w3-dropdown-hover:hover > .w3-button:first-child,
 .w3-dropdown-click:hover > .w3-button:first-child {
-  background-color: #d8d2d2;
+  /* background-color: #d8d2d2; */
   color: #000;
 }
 
 .w3-dropdown-content {
   cursor: auto;
   color: #000;
-  background-color: #d8d2d2;
+  /* background-color: #d8d2d2; */
   display: none;
   position: absolute;
   min-width: 160px;
@@ -698,9 +698,9 @@ a {
   outline: 0;
 }
 
-.w3-bar-block.w3-center .w3-bar-item {
-  text-align: center;
-}
+/* .w3-bar-block.w3-center .w3-bar-item {
+  /* text-align: center; */
+/* } */
 
 .w3-block {
   display: block;
@@ -985,11 +985,11 @@ a {
     width: 100% !important;
   }
 
-  .w3-bar-item.w3-mobile,
+  /* .w3-bar-item.w3-mobile,
   .w3-dropdown-hover.w3-mobile,
   .w3-dropdown-click.w3-mobile {
     text-align: center;
-  }
+  } */
 
   .w3-dropdown-hover.w3-mobile,
   .w3-dropdown-hover.w3-mobile .w3-btn,
@@ -1591,10 +1591,12 @@ a {
   float: right !important;
 }
 
+/* ############ */
 .w3-button:hover {
   color: #000 !important;
-  background-color: #ccc !important;
+  background-color: #00000000 !important;
 }
+/* ############# */
 
 .w3-transparent,
 .w3-hover-none:hover {
@@ -2243,7 +2245,11 @@ html {
 
 .parallax {
   /* The image used */
-  background-image: url("PXL_20250805_083319760.MP (1).jpg");
+  background-image: url("compressed_sceneic_portfolio/PXL_20250805_083319760.MP (1) (1).jpg");
+
+  @media (max-width: 480px) {
+    background-image: url("compressed_sceneic_portfolio/PXL_20250805_083319760.MP (2).jpg");
+  }
 
   /* Set a specific height */
   min-height: 600px;
@@ -2263,10 +2269,11 @@ html {
   /* height: auto; must match width */
   border-radius: 50%; /* makes the circle */
   background: linear-gradient(
-    141deg,
-    rgba(0, 125, 202, 0.409) 0%,
-    rgba(26, 0, 158, 0.4) 51%,
-    rgba(75, 0, 140, 0.4) 75%
+    155deg,
+    rgba(0, 0, 0, 0.402) 10%,
+    /* rgba(191, 198, 198, 0.395) 15%, */ rgba(0, 255, 242, 0.237) 40%,
+    /* rgba(26, 0, 158, 0.13) 70%, */ /* rgba(188, 193, 194, 0) 80%, */
+      rgba(0, 41, 65, 0.626) 85%
   );
   z-index: 3;
   margin-top: 5%;
@@ -2282,7 +2289,7 @@ html {
 
   text-align: center;
   padding: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .banner h1 {
@@ -2293,7 +2300,7 @@ html {
 .banner p {
   font-size: 50px; /* adjust */
   margin: 0;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
@@ -2306,33 +2313,47 @@ html {
     /* height: 50%; */
   }
   .banner p {
+    font-size: 30px; /* adjust for smaller screens */
+  }
+  .banner h1 {
     font-size: 40px; /* adjust for smaller screens */
-
-    }
-    .banner h1 {
-      font-size: 30px; /* adjust for smaller screens */
-
-    }
+  }
+  .sidenav a,
+  .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .sidenav {
+    height: 50%;
+    width: 50px !important;
   }
 }
 
 @media (max-width: 480px) {
   /* Target very small screens (like phones) */
   .banner {
-    /* padding-top: 1px; Minimal padding for very small screens */
-    margin-right: 10% !important; /*Center the banner on small screens
+    padding-top: 5%; /* Minimal padding for very small screens */
+    margin-right: 6% !important; /*Center the banner on small screens
     /* width: 20vw;
         height: 20vw; */
   }
-   }
   .banner p {
+    font-size: 20px; /* adjust for smaller screens */
+  }
+  .banner h1 {
     font-size: 30px; /* adjust for smaller screens */
-
-    }
-    .banner h1 {
-      font-size: 20px; /* adjust for smaller screens */
-
-    }
+  }
+  .sidenav a,
+  .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .sidenav {
+    height: 50%;
+    width: 50px !important;
+  }
 }
 
 * {
@@ -2377,7 +2398,7 @@ html {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: rgba(26, 0, 158, 0.4); /* Set a background color */
+  background-color: rgba(0, 172, 202, 0.788); /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -2405,7 +2426,7 @@ html {
     } */
 
 /* Responsive tweaks */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   #myGrid {
     column-count: 2;
   }
@@ -2415,7 +2436,7 @@ html {
   #myGrid {
     column-count: 1;
   }
-}
+} */
 
 /* sidebar with dropdown for contact info */
 /* Fixed sidenav, full height */
@@ -2456,13 +2477,13 @@ html {
 /* On mouse-over */
 .sidenav a:hover,
 .dropdown-btn:hover {
-  color: rgba(255, 255, 255, 0.715);
+  /* color: rgba(255, 255, 255, 0.715); */
 }
 
 /* Dropdown container: size to fit text and allow it to overflow the sidenav */
 .dropdown-container {
   display: none;
-  background-color: rgba(255, 255, 255, 0.438);
+  /* background-color: rgba(255, 255, 255, 0.438); */
   padding: 8px;
   white-space: nowrap; /* keep items on one line so width matches text */
   width: -moz-max-content;
@@ -2486,7 +2507,7 @@ html {
 /* Add an active class to the active dropdown button */
 .active {
   background-color: rgba(26, 0, 158, 0.4);
-  color: rgb(255, 255, 255);
+  color: rgb(193, 197, 198);
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
@@ -2515,4 +2536,15 @@ html {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+.text_contact {
+  font-size: 17px;
+  color: rgb(165, 169, 170);
+  text-align: left;
+}
+.text_contacta {
+  font-size: 17px;
+  color: rgb(165, 169, 170);
+  text-align: left;
 }
