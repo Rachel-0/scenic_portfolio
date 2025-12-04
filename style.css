@@ -2322,10 +2322,10 @@ html {
     /* height: 50%; */
   }
   .banner p {
-    font-size: 30px; /* adjust for smaller screens */
+    font-size: 40px; /* adjust for smaller screens */
   }
   .banner h1 {
-    font-size: 40px; /* adjust for smaller screens */
+    font-size: 42px; /* adjust for smaller screens */
   }
   .sidenav a,
   .dropdown-btn {
@@ -2349,10 +2349,10 @@ html {
         height: 20vw; */
   }
   .banner p {
-    font-size: 20px; /* adjust for smaller screens */
+    font-size: 30px; /* adjust for smaller screens */
   }
   .banner h1 {
-    font-size: 30px; /* adjust for smaller screens */
+    font-size: 32px; /* adjust for smaller screens */
   }
   .sidenav a,
   .dropdown-btn {
